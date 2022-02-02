@@ -1,0 +1,494 @@
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+$VeryDarkBlue: hsl(243, 87%, 12%);
+$DesaturatedBlue: hsl(238, 22%, 44%);
+
+// ### Accent
+
+$BrightBlue: hsl(224, 93%, 58%);
+$ModerateCyan: hsl(170, 45%, 43%);
+
+// ### Neutral
+
+$LightGrayishBlue: hsl(240, 75%, 98%);
+$LightGray: hsl(0, 0%, 75%);
+
+// ## Typography
+
+// ### Headings, Calltoactions, Header Navigation
+
+// - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+// - Weights: 400, 700
+
+// ### Body
+
+// - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+// - Weights: 400
+// @import url("https://fonts.google.com/specimen/Open+Sans");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  // font-family: "Open Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  font-weight: 400;
+}
+@mixin flex-box($b: space-between) {
+  display: flex;
+  justify-content: $b;
+  align-items: stretch;
+}
+.container {
+  //   color: antiquewhite;
+  // background: $LightGrayishBlue;
+  background-color: white;
+  header {
+    width: 100%;
+    height: 70px;
+    padding: 60px;
+
+    .row {
+      width: 100%;
+      @include flex-box();
+    }
+    nav ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-left: 40px;
+
+        a {
+          text-decoration: none;
+          color: $VeryDarkBlue;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .showcase {
+    padding: 60px;
+    display: grid;
+    // margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    .imgs img {
+      width: 100%;
+      height: 100%;
+    }
+    .text {
+      @include flex-box(center);
+      //   padding: 60px;
+      flex-direction: column;
+
+      h1 {
+        padding-bottom: 50px;
+        font-size: 2.1rem;
+        font-weight: bold;
+        text-align: left;
+        line-height: 45px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+      }
+
+      .button {
+        width: 100%;
+        margin-top: 20px;
+        .ps2 {
+          font-size: 16px;
+        }
+        input {
+          width: 60%;
+          border: 1px solid black;
+          border-radius: 2px;
+          padding: 12px 20px;
+        }
+        button {
+          padding: 12px 20px;
+          width: 30%;
+          // margin-left: 10px;
+          color: whitesmoke;
+          background-color: $BrightBlue;
+          border: none;
+          outline: none;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+.showcase2 {
+  background: url("../images/bg-curve-desktop.svg") center center/cover;
+  .m0 {
+    padding: 120px 0;
+  }
+  .img {
+    // @include flex-box();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 20px;
+    img {
+      width: 100%;
+      height: 80%;
+    }
+  }
+
+  .link {
+    align-self: flex-start;
+    margin-top: 20px;
+    border-bottom: 1px solid $ModerateCyan;
+    padding-bottom: 5px;
+
+    a {
+      text-decoration: none;
+      color: $ModerateCyan;
+    }
+    img {
+      position: relative;
+      top: 3px;
+    }
+  }
+  .card {
+    // width: 50%;
+    background-color: white;
+    padding: 30px 40px;
+    width: 80%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 60px;
+    @include flex-box();
+    flex-direction: column;
+    border-radius: 10px;
+    align-self: flex-start;
+    .card-body {
+      .p {
+        font-size: 15px;
+        padding-top: 20px;
+        color: $VeryDarkBlue;
+        font-weight: 500;
+      }
+    }
+  }
+  .user {
+    align-self: flex-start;
+    @include flex-box();
+    margin-top: 20px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+    }
+    .name {
+      margin-left: 10px;
+      h4 {
+        font-weight: bold;
+      }
+      h6 {
+        padding-top: 5px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.p {
+  font-size: 80px;
+}
+.showcase3 {
+  background-color: $DesaturatedBlue;
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+    .ps {
+      align-self: stretch;
+      font-size: 14px;
+      color: white;
+      margin-top: 5px;
+      font-weight: 400;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid $LightGray;
+      padding: 10px;
+      outline: none;
+    }
+    button {
+      align-self: stretch;
+      width: 40%;
+      background: $BrightBlue;
+      padding: 10px;
+      border: none;
+      opacity: 1;
+      color: white;
+      outline: none;
+      margin-top: 20px;
+    }
+  }
+  .main2 {
+    padding: 60px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    h1 {
+      font-size: 2.32rem;
+      padding-bottom: 30px;
+    }
+    p {
+      font-size: 19px;
+      line-height: 30px;
+    }
+  }
+}
+footer {
+  width: 100%;
+  padding: 70px 60px;
+  background: $VeryDarkBlue;
+
+  .flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+      ul {
+        padding-top: 100px;
+        text-align: left;
+        list-style: none;
+        padding-left: 0;
+        padding-right: 0;
+
+        li {
+          // margin-top: 10px;
+          margin-bottom: 30px;
+
+          a {
+            font-size: 16px;
+            text-decoration: none;
+            color: $LightGrayishBlue;
+            font-weight: 200;
+          }
+          a:hover {
+            color: $DesaturatedBlue;
+          }
+        }
+      }
+    }
+    .sosial {
+      align-self: center; // display: inline-block;
+      padding-bottom: 80px;
+      margin-right: 80px;
+
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // flex-direction: column;
+      .icon {
+        width: 20px;
+        margin-left: 20px;
+        height: 20px;
+        padding: 20px;
+        color: $LightGrayishBlue;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+
+        h3:hover {
+          color: $ModerateCyan;
+        }
+      }
+    }
+
+    .img {
+      margin-bottom: 30px;
+      align-self: flex-start;
+
+      img {
+        margin-top: 20px;
+      }
+      span {
+        padding-left: 10px;
+        color: $LightGrayishBlue;
+
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    header {
+      padding: 20px;
+      nav ul {
+        margin-top: 10px;
+        li {
+          margin-left: 20px;
+        }
+      }
+    }
+    .showcase {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 30px;
+      text-align: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-direction: column;
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        order: 1;
+        flex-direction: column;
+
+        h1 {
+          text-align: center;
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.3rem;
+          font-weight: 200;
+          color: $VeryDarkBlue;
+        }
+
+        .button {
+          margin-top: 50px;
+          display: grid;
+
+          .ps2 {
+            order: 1;
+          }
+          input {
+            width: 100%;
+            padding: 18px 20px;
+            border: 2px solid $LightGray;
+            outline: none;
+            order: 0;
+          }
+          button {
+            width: 100%;
+            order: 2;
+            align-self: center;
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 20px;
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+    .showcase2 {
+      background: url("../images/bg-curve-mobile.svg") center center/cover;
+      margin-top: 100px;
+      .m0 {
+        padding: 40px 0;
+        text-align: center;
+        width: 100%;
+        .link {
+          align-self: center;
+          margin-top: 40px;
+        }
+        .card {
+          align-self: center;
+          text-align: left;
+
+          .card-body {
+            .p {
+              padding-top: 10px;
+            }
+          }
+        }
+        h1 {
+          font-size: 1.4rem;
+          text-align: center;
+        }
+        p {
+          text-align: left;
+          font-size: 18px;
+          font-weight: 200;
+          color: $DesaturatedBlue;
+        }
+      }
+
+      .img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .showcase3 {
+      width: 100%;
+      .main2 {
+        padding: 40px 0px 0;
+        h1 {
+          font-size: 1.6rem;
+        }
+        p {
+          font-size: 1.4rem;
+          font-weight: 200;
+        }
+      }
+      .main3 {
+        .buttons {
+          padding: 20px 40px;
+          input {
+            border: 1px solid $LightGray;
+          }
+          .ps {
+            text-align: left;
+          }
+          .btn {
+            width: 100%;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 60px 30px;
+    .flex-box {
+      flex-direction: column;
+
+      .links {
+        align-self: flex-start;
+        ul {
+          padding-top: 20px;
+        }
+      }
+      .sosial {
+        margin-right: 0;
+      }
+    }
+  }
+}
